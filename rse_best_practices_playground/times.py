@@ -6,11 +6,12 @@ import datetime
 # ===============================================================
 my_level = "beginner"  # beginner or pro
 
-
 # ===============================================================
 # Beginner level
 # All students should try first to solve the problem at this level.
 # ===============================================================
+# This calculated the fastest time out of the time_list, so it searches for 
+# the smallest number in the list
 def calculate_fastest_time(time_list):
     fastest_time = time_list[0]
     for time in time_list:
@@ -26,8 +27,6 @@ def print_fastest_time(time_list):
             fastest_time = time
 
     print(f"This is the fastest time: {fastest_time} 🚀")
-
-
 # ===============================================================
 # Pro level
 # Only for students who have solved the problem at the beginner level
@@ -109,6 +108,8 @@ if __name__ == "__main__":
     if my_level == "beginner":
         time_list = [1, 2, 3, 4]
         print(calculate_fastest_time(time_list))
+	# assert isinstance(calculate_fastest_time(time_list), int)
+	# assert calculate_fastest_time(time_list) ==1 
     elif my_level == "pro":
         large = time_range("2010-01-12 10:00:00", "2010-01-12 12:00:00")
         short = time_range("2010-01-12 10:30:00", "2010-01-12 10:45:00", 2, 60)
